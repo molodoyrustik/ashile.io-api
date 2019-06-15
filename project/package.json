@@ -1,0 +1,75 @@
+{
+  "private": true,
+  "name": "babel-starter-kit",
+  "version": "0.0.0",
+  "description": "",
+  "homepage": "",
+  "repository": "",
+  "author": "",
+  "contributors": [],
+  "license": "MIT",
+  "keywords": [],
+  "main": "index.js",
+  "jsnext:main": "index.es6.js",
+  "babel": {
+    "presets": [
+      "latest",
+      "stage-0"
+    ],
+    "plugins": [
+      "transform-runtime"
+    ]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "airbnb-base"
+  },
+  "dependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-runtime": "^6.11.6",
+    "bcryptjs": "^2.3.0",
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "email-existence": "^0.1.6",
+    "es6-promise": "^4.0.5",
+    "express-async-router": "^0.1.12",
+    "isomorphic-fetch": "^2.2.1",
+    "left-pad": "^1.1.3",
+    "lodash": "^4.17.2",
+    "mongoose": "^4.6.8",
+    "nodemailer": "^4.6.7",
+    "nodemailer-smtp-transport": "^2.7.4",
+    "uuid": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-core": "^6.17.0",
+    "babel-eslint": "^7.0.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "babel-register": "^6.16.3",
+    "bluebird": "^3.4.6",
+    "bunyan": "^1.8.5",
+    "chai": "^3.5.0",
+    "cors": "^2.8.1",
+    "coveralls": "^2.11.14",
+    "del": "^2.2.2",
+    "eslint": "^3.8.0",
+    "eslint-config-airbnb-base": "^8.0.0",
+    "eslint-plugin-import": "^1.16.0",
+    "express": "^4.14.0",
+    "express-jwt": "^5.1.0",
+    "istanbul": "^1.1.0-alpha.1",
+    "jsonwebtoken": "^7.1.9",
+    "mocha": "^3.1.2",
+    "nodemon": "^1.11.0",
+    "rollup": "^0.36.3",
+    "rollup-plugin-babel": "^2.6.1",
+    "sinon": "^2.0.0-pre.3"
+  },
+  "scripts": {
+    "build": "node tools/build",
+    "start": "nodemon --exec babel-node -- src/index.js | node ./bunyan -o short -l trace"
+  }
+}

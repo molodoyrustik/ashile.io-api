@@ -1,0 +1,18 @@
+{
+  "apps":[
+    {
+      "name": "www",
+      "script": "./project/dist/index.js",
+      "cwd": "./project",
+      "error_file": "../runtime/logs/node.error.log",
+      "pid_file": "../runtime/tmp/landing.pid",
+      "max_memory_restart": "512M",
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "env_dev": {
+        "NODE_ENV": "development"
+      }
+    }
+  ]
+}
